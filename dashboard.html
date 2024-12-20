@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Queue Management Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Queue Management Dashboard</h1>
+            <label for="filter-priority">Filter by Priority:</label>
+            <select id="filter-priority">
+                <option value="">All</option>
+                <option value="low">Low</option>
+                <option value="moderate">Moderate</option>
+                <option value="critical">Critical</option>
+            </select>
+            <label for="filter-symptom">Filter by Symptom:</label>
+            <input type="text" id="filter-symptom" placeholder="Enter symptom">
+            <button id="apply-filters">Apply Filters</button>
+        </header>
+        <main>
+            <table id="patient-table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Priority Score</th>
+                        <th>Waiting Time (min)</th>
+                        <th>Symptoms</th>
+                    </tr>
+                </thead>
+                <tbody id="patient-list">
+                    <!-- Patient data will be populated here -->
+                </tbody>
+            </table>
+        </main>
+    </div>
+    <script src="dashboard.js"></script>
+</body>
+</html> 

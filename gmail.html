@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gmail Integration</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Gmail Integration</h1>
+            <button id="authorize-button" class="material-button">Authorize Gmail</button>
+            <button id="signout-button" class="material-button" style="display: none;">Sign Out</button>
+        </header>
+        <main>
+            <h2>Fetched Lab Reports and Emails</h2>
+            <div id="email-list"></div>
+        </main>
+    </div>
+    <script src="https://apis.google.com/js/api.js"></script>
+    <script src="gmail.js"></script>
+</body>
+</html> 

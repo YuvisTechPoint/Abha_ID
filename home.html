@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Triage Assistant</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://apis.google.com/js/api.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 id="title">ABHA ID</h1>
+            <p id="subtitle">Multilingual, Voice-enabled Lab Results</p>
+            <label for="language">Select Language:</label>
+            <select id="language">
+                <option value="en">English</option>
+                <option value="hi">Hindi</option>
+                <option value="es">Spanish</option>
+                <option value="ta">Tamil</option>
+                <option value="bn">Bengali</option>
+                <!-- Add more languages as needed -->
+            </select>
+        </header>
+        <main>
+            <div class="input-section">
+                <label for="abha-id" id="abha-id-label">Enter ABHA ID:</label>
+                <input type="text" id="abha-id" placeholder="Enter your ABHA ID">
+                <button id="fetchData">Fetch Data</button>
+                <p id="abha-id-feedback" style="color: red;"></p>
+            </div>
+            <div class="symptoms-section">
+                <label for="symptom" id="symptom-label">Select Symptom:</label>
+                <select id="symptom">
+                    <option value="">--Select Symptom--</option>
+                    <option value="fever">Fever</option>
+                    <option value="cough">Cough</option>
+                    <option value="headache">Headache</option>
+                    <option value="nausea">Nausea</option>
+                </select>
+                <button onclick="addSymptom()">Add Symptom</button>
+            </div>
+            <div class="symptom-list">
+                <h2>Reported Symptoms:</h2>
+                <ul id="symptom-list"></ul>
+            </div>
+            <div class="questions-section">
+                <h2>Questions about Symptoms</h2>
+                <div id="questions"></div>
+                <button id="next-question" onclick="nextQuestion()">Next</button>
+            </div>
+            <div class="results-section">
+                <h2>Results</h2>
+                <div class="results">
+                    <p>Connect to Gmail or hospital systems for results.</p>
+                    <button class="connect-button" onclick="connectToGmail()">Connect</button>
+                </div>
+            </div>
+            <div class="priority-score">
+                <h2>Priority Score: <span id="score" class="score">0/10</span></h2>
+                <p id="summary">Summary: Patient symptoms and data.</p>
+            </div>
+            <div class="outcome-section">
+                <button id="search-button" onclick="showExpectedOutcome()">Search</button>
+                <p id="outcome-result"></p>
+            </div>
+        </main>
+        <footer>
+            <p>Contact | Privacy Policy</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
